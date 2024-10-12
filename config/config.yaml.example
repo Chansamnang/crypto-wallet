@@ -1,0 +1,57 @@
+app:
+  timezone: "Asia/Bangkok"               # server timezone
+  env: dev                               # dev、prod
+  proxyURL: ""
+  port: 8085
+
+# Mysql
+mysql_master:
+  address:
+    - ip:port
+  username:
+  password:
+  database:
+  maxOpenConn: 1000
+  maxIdleConn: 100
+  maxLifeTime: 60
+  logLevel: 4
+  slowThreshold: 500
+mysql_slave:
+  address:
+    - ip:port
+    - ip:port
+  username:
+  password:
+  database:
+  maxOpenConn: 1000
+  maxIdleConn: 100
+  maxLifeTime: 60
+  logLevel: 4
+  slowThreshold: 500
+
+# Redis
+redis:
+  clusterMode: false
+  address: [ ip:port ]
+  username:
+  password:
+
+# Log
+log:
+  logLevel: debug #debug, info, warn, error, panic, fatal, trace
+
+jwt:
+  key: QQYnRFerJTSEcrfB89fw8prOaObmrch8
+
+blockchain:
+  mnemonicPhrase:
+  tronAlchemy: https://nileapi.tronscan.org/api/account
+  tronUsdtContract: TXLAQ63Xg1NAzckPwKHvzw7CSEmLMEqcdj #Testnet
+  tronGrpc: grpc.nile.trongrid.io:50051 #Testnet
+#  tronGrpc: grpc.trongrid.io:50051  #Mainnet
+#  tronUsdtContract: TR7NHqjeKQxGTCi8q8ZY4pL8otSzgjLj6t #Mainnet
+  tronGasFee: 30
+#  ethAlchemy: https://eth-mainnet.g.alchemy.com/v2/apiKey #mainnet
+  ethAlchemy: https://eth-sepolia.g.alchemy.com/v2/apiKey #testnet
+  ethUsdtContract: 0xe699595940072013B40FDf66C91A8FCfd08C4455 #testnet
+
