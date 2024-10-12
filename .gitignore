@@ -1,0 +1,12 @@
+.idea/
+.vscode/
+logs/
+vendor/*
+tmp/
+logs/*
+gnatsd.pid
+data/*
+natsData/*
+appconfig.json
+config/config.yaml
+.DS_Store
